@@ -14,16 +14,22 @@ const Scoreboard = (props) => {
         );
       }
 
-  
+
+      document.body.style.backgroundColor = "#326F32";
+
 
 const styles = StyleSheet.create({
+ 
+
     cardItemContainer: {
       borderRadius: 8,
       borderColor: "black",
       borderWidth: 1,
       margin: 12,
+      backgroundColor: "#E5E5E5",
       alignItems: "center"
     },
+
     scoreContainer: {
       margin: 3
     },
