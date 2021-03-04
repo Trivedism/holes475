@@ -38,6 +38,8 @@ const App = () => {
       />
     </SafeAreaView> */}
     <Scoreboard/>
+    <Scoreboard/>
+    <Scoreboard/>
     </>
 
   );

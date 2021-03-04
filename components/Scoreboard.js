@@ -11,12 +11,6 @@ class Scoreboard extends Component {
               </View>
               <Text style={styles.teamScore}>8</Text>
             </View>
-            <View style={styles.scoreContainer}>
-              <View>
-                <Text style={styles.teamName}>Jayanth</Text>
-              </View>
-              <Text style={styles.teamScore}>8</Text>
-            </View>
           </View>
         );
       }
