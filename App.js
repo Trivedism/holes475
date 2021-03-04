@@ -37,9 +37,9 @@ const App = () => {
         keyExtractor={item => item.id}
       />
     </SafeAreaView> */}
-    <Scoreboard/>
-    <Scoreboard/>
-    <Scoreboard/>
+    <Scoreboard name="Saumya" score ="8"/>
+    <Scoreboard name="Jay" score ="2"/>
+    <Scoreboard name="Oshea" score ="3"/>
     </>
 
   );

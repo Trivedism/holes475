@@ -1,20 +1,19 @@
 import React, { Component } from "react";
 import { Text, View, StyleSheet } from "react-native";
 
-class Scoreboard extends Component {
-    render() {
+const Scoreboard = (props) => {
         return (
           <View style={styles.cardItemContainer}>
             <View style={styles.scoreContainer}>
               <View>
-                <Text style={styles.teamName}>Saumya</Text>
+                <Text style={styles.teamName}>{props.name}</Text>
               </View>
-              <Text style={styles.teamScore}>8</Text>
+              <Text style={styles.teamScore}>{props.score}</Text>
             </View>
           </View>
         );
       }
-  }
+
   
 
 const styles = StyleSheet.create({
