@@ -1,5 +1,6 @@
 import React from 'react';
 import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar } from 'react-native';
+import Scoreboard from './components/Scoreboard'
 
 const DATA = [
   {
@@ -28,13 +29,17 @@ const App = () => {
   );
 
   return (
-    <SafeAreaView style={styles.container}>
+    <>
+    {/* <SafeAreaView style={styles.container}>
       <FlatList
         data={DATA}
         renderItem={renderItem}
         keyExtractor={item => item.id}
       />
-    </SafeAreaView>
+    </SafeAreaView> */}
+    <Scoreboard/>
+    </>
+
   );
 }
 
