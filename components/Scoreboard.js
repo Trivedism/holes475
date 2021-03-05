@@ -15,9 +15,6 @@ const Scoreboard = (props) => {
       }
 
 
-      document.body.style.backgroundColor = "#326F32";
-
-
 const styles = StyleSheet.create({
  
 
