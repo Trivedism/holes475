@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
       margin: 12,
       backgroundColor: "#E5E5E5",
       alignItems: "center"
+      
     },
 
     scoreContainer: {
