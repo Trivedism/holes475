@@ -19,6 +19,7 @@ function HomePage({ navigation }) {
       
         title="Go to Score Card"
         onPress={() => navigation.navigate('scoreCard')}
+        color = "#37D67A"
       />
     </View>
   );

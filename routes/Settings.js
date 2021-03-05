@@ -6,7 +6,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 function SettingsScreen({ navigation }) {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Button title="Go back" onPress={() => navigation.goBack()} />
+        <Button title="Go back" onPress={() => navigation.goBack()} 
+        color = "#37D67A"/>
       </View>
     );
   }

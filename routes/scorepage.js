@@ -12,10 +12,12 @@ function Scorepage({ navigation }) {
       <Scoreboard name = "SammmyTesla" score = "69"/>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Button
+          color = "#37D67A"
           title="Go to Settings"
           onPress={() => navigation.navigate('Settings')}
         />
-        <Button title="Go back" onPress={() => navigation.goBack()} />
+        <Button title="Go back" onPress={() => navigation.goBack()}
+        color = "#37D67A" />
       </View>
       </>
     );
