@@ -1,8 +1,13 @@
 import * as React from 'react';
-import { Button, View, Image, StyleSheet } from 'react-native';
+import { Button, View, Image, StyleSheet, TextInput } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+class App extends React.Component{
+  state ={
+    color: 'Purple'
+  }
+}
 function HomePage({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -11,6 +16,7 @@ function HomePage({ navigation }) {
         source={require('../assets/Holes.png')}
       />
       <Button
+      
         title="Go to Score Card"
         onPress={() => navigation.navigate('scoreCard')}
       />
