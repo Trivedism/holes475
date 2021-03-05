@@ -1,6 +1,10 @@
 import React from 'react';
-import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar } from 'react-native';
+import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Button } from 'react-native';
 import Scoreboard from './components/Scoreboard'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Stack from './routes/stackhome'
+
 
 const DATA = [
   {
@@ -37,9 +41,9 @@ const App = () => {
         keyExtractor={item => item.id}
       />
     </SafeAreaView> */}
-    <Scoreboard name="Saumya" score ="8"/>
-    <Scoreboard name="Jay" score ="2"/>
-    <Scoreboard name="Oshen" score ="3"/>
+    <NavigationContainer>
+      <Stack />
+    </NavigationContainer>
     </>
     
 
