@@ -7,8 +7,8 @@ function HomePage({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Button
-        title="Go to Scorepage"
-        onPress={() => navigation.navigate('Scorepage')}
+        title="Go to Score Card"
+        onPress={() => navigation.navigate('scoreCard')}
       />
     </View>
   );
