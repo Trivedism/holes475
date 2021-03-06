@@ -7,9 +7,9 @@ import ScoreCardVal from '../components/scoreCardVal'
 function scoreCard({ navigation }) {
     return (
       <>
-      <ScoreCardVal name = "SCORE CARDDDDD" score = "6"/>
-      <ScoreCardVal name = "Gayanth" score = "9"/>
-      <ScoreCardVal name = "SammmyTesla" score = "69"/>
+      <ScoreCardVal name = "Player 1"/>
+      <ScoreCardVal name = "Player 2"/>
+      <ScoreCardVal name = "Player 3"/>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Button
           title="Go to Settings"

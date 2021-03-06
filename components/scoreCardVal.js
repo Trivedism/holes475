@@ -8,15 +8,29 @@ const scoreCardVal = (props) => {
               <View>
                 <Text style={styles.teamName}>{props.name}</Text>
               </View>
-              <NumericInput type='up-down'
-       onChange={value => console.log(value)}
-      valueType='real'
-       rounded 
-       />
+              
+              <View style = {styles.spacing}>
+              <View style = {{flexDirection: 'row'}}>
+                <Text>Hole 1  </Text>
+                <NumericInput type='up-down'
+                onChange={value => console.log(value)}
+                valueType='real'
+                rounded />
+
+                <Text>Hole 2  </Text>
+                <NumericInput type='up-down'
+                onChange={value => console.log(value)}
+                valueType='real'
+                rounded />
+              </View>
+
+            </View>
+
               <Text>"here is where the numerical inputs need to go"</Text>
               <Text style={styles.teamScore}>{props.score}</Text>
             </View>
           </View>
+          
         );
       }
 
@@ -35,7 +49,7 @@ const styles = StyleSheet.create({
     },
 
     scoreContainer: {
-      margin: 3
+      margin: 1
     },
     teamName: {
       fontSize: 14,
