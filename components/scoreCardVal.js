@@ -11,13 +11,19 @@ const scoreCardVal = (props) => {
               
               <View style = {styles.spacing}>
               <View style = {{flexDirection: 'row'}}>
-                <Text>Hole 1  </Text>
+              <Text> Hole 1                     </Text>
+              <Text>Hole 2                      </Text>
+              <Text>Hole 3                      </Text>
+                </View>
+              <View style = {{flexDirection: 'row'}}>
                 <NumericInput type='up-down'
                 onChange={value => console.log(value)}
                 valueType='real'
                 rounded />
-
-                <Text>Hole 2  </Text>
+                <NumericInput type='up-down'
+                onChange={value => console.log(value)}
+                valueType='real'
+                rounded />
                 <NumericInput type='up-down'
                 onChange={value => console.log(value)}
                 valueType='real'
@@ -26,7 +32,6 @@ const scoreCardVal = (props) => {
 
             </View>
 
-              <Text>"here is where the numerical inputs need to go"</Text>
               <Text style={styles.teamScore}>{props.score}</Text>
             </View>
           </View>

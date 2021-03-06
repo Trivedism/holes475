@@ -21,8 +21,8 @@ function scoreCard({ navigation }) {
           onPress={() => navigation.navigate('Scorepage')}
           color = "#37D67A"
         />
-        <Button title="Go back" onPress={() => navigation.goBack()} 
-        color = "#37D67A"/>
+        {/* <Button title="Go back" onPress={() => navigation.goBack()} 
+        color = "#37D67A"/> */}
       </View>
       </>
     );
