@@ -7,6 +7,7 @@ import Scoreboard from '../components/Scoreboard'
 function Scorepage({ navigation }) {
     return (
       <>
+      <Scoreboard name = "Rankings!" font = "bold"/>
       <Scoreboard name = "Player 2" score = "4"/>
       <Scoreboard name = "Player 1" score = "7"/>
       <Scoreboard name = "Player 3" score = "8"/>

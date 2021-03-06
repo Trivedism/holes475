@@ -7,6 +7,7 @@ import ScoreCardVal from '../components/scoreCardVal'
 function scoreCard({ navigation }) {
     return (
       <>
+      
       <ScoreCardVal name = "Player 1"/>
       <ScoreCardVal name = "Player 2"/>
       <ScoreCardVal name = "Player 3"/>
