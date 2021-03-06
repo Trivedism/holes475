@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import ScoreCardVal from '../components/scoreCardVal'
 import scoreCardVal from '../components/scoreCardVal';
+import { Image, ScrollView, Text } from 'react-native';
 
 function scoreCard({ navigation: {navigate}, route}) {
     
@@ -16,6 +17,7 @@ function scoreCard({ navigation: {navigate}, route}) {
       {/* <ScoreCardVal name = {players.length}/>
       <ScoreCardVal name = "Player 2"/>
       <ScoreCardVal name = "Player 3"/> */}
+       <ScrollView>
       <View>
       
       {
@@ -25,7 +27,10 @@ function scoreCard({ navigation: {navigate}, route}) {
             )
         })
       }
+        
       </View>
+       </ScrollView>
+   
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Button
           title="Go to Final Scores"
@@ -41,7 +46,9 @@ function scoreCard({ navigation: {navigate}, route}) {
         {/* <Button title="Go back" onPress={() => navigation.goBack()} 
         color = "#37D67A"/> */}
       </View>
+      
       </>
+      
     );
   }
 
