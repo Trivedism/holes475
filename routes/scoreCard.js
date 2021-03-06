@@ -2,14 +2,14 @@ import * as React from 'react';
 import { Button, View, StatusBar, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Scoreboard from '../components/Scoreboard'
+import ScoreCardVal from '../components/scoreCardVal'
 
 function scoreCard({ navigation }) {
     return (
       <>
-      <Scoreboard name = "SCORE CARDDDDD" score = "6"/>
-      <Scoreboard name = "Gayanth" score = "9"/>
-      <Scoreboard name = "SammmyTesla" score = "69"/>
+      <ScoreCardVal name = "SCORE CARDDDDD" score = "6"/>
+      <ScoreCardVal name = "Gayanth" score = "9"/>
+      <ScoreCardVal name = "SammmyTesla" score = "69"/>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Button
           title="Go to Settings"
