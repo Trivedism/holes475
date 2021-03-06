@@ -11,16 +11,17 @@ function scoreCard({ navigation }) {
       <ScoreCardVal name = "Player 2"/>
       <ScoreCardVal name = "Player 3"/>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Button
+          title="Go to Final Scores"
+          onPress={() => navigation.navigate('Scorepage')}
+          color = "#37D67A"
+        />
         <Button
           title="Go to Settings"
           onPress={() => navigation.navigate('Settings')}
           color = "#37D67A"
         />
-        <Button
-          title="Go to Final Scores"
-          onPress={() => navigation.navigate('Scorepage')}
-          color = "#37D67A"
-        />
+
         {/* <Button title="Go back" onPress={() => navigation.goBack()} 
         color = "#37D67A"/> */}
       </View>
