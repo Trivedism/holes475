@@ -4,13 +4,21 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Scoreboard from '../components/Scoreboard'
 
-function Scorepage({ navigation }) {
+function Scorepage({ navigation: {navigate}, route }) {
+
+   var players = route.params.players
+
     return (
       <>
-      <Scoreboard name = "Rankings!" font = "bold"/>
-      <Scoreboard name = "Player 2" score = "4"/>
-      <Scoreboard name = "Player 1" score = "7"/>
-      <Scoreboard name = "Player 3" score = "8"/>
+      <View>
+      {
+        players.map((data, index) => {
+            return(
+              <Scoreboard key ={index.toString()} name = {`Player${index}`}/>
+            )
+        })
+      }
+      </View>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Button
           color = "#37D67A"

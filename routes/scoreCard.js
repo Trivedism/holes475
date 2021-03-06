@@ -3,18 +3,33 @@ import { Button, View, StatusBar, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import ScoreCardVal from '../components/scoreCardVal'
+import scoreCardVal from '../components/scoreCardVal';
 
-function scoreCard({ navigation }) {
+function scoreCard({ navigation: {navigate}, route}) {
+    
+    var players = Array.from(Array(route.params.players).keys())
+    var names = []
+
     return (
       <>
       
-      <ScoreCardVal name = "Player 1"/>
+      {/* <ScoreCardVal name = {players.length}/>
       <ScoreCardVal name = "Player 2"/>
-      <ScoreCardVal name = "Player 3"/>
+      <ScoreCardVal name = "Player 3"/> */}
+      <View>
+      
+      {
+        players.map((data, index) => {
+            return(
+              <ScoreCardVal key ={index.toString()} name = {`Player${index}`}/>
+            )
+        })
+      }
+      </View>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Button
           title="Go to Final Scores"
-          onPress={() => navigation.navigate('Scorepage')}
+          onPress={() => navigate('Scorepage', { players: players })}
           color = "#37D67A"
         />
         <Button

@@ -1,12 +1,18 @@
-import React, { Component } from "react";
-import { Text, View, StyleSheet } from "react-native";
+import React, { Component, useState } from "react";
+import { Text, View, StyleSheet, TextInput } from "react-native";
 import NumericInput from 'react-native-numeric-input'
+
 const scoreCardVal = (props) => {
+
+  const [name, setName] = useState(props.name)
+  const [names, setNames] = useState([])
+
         return (
           <View style={styles.cardItemContainer}>
             <View style={styles.scoreContainer}>
               <View>
-                <Text style={styles.teamName}>{props.name}</Text>
+                {/* <Text style={styles.teamName}>{props.name}</Text> */}
+                <TextInput style={styles.teamName} placeholder={name} onChangeText={(val) => setName(val), (val) => setNames(names.concat(val))}/>
               </View>
               
               <View style = {styles.spacing}>
@@ -58,7 +64,8 @@ const styles = StyleSheet.create({
     },
     teamName: {
       fontSize: 14,
-      textAlign: "center"
+      textAlign: "center",
+      fontWeight: "bold"
     },
     teamScore: {
       fontSize: 24,

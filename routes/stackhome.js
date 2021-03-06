@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 function MyStack() {
   return (
     <>
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Home">
       <Stack.Screen name="Home" component={Homepage} />
       <Stack.Screen name="Scorepage" component={scorepage} />
       <Stack.Screen name="scoreCard" component={scoreCard} />
