@@ -39,7 +39,7 @@ function scoreCard({ navigation: {navigate}, route}) {
         />
         <Button
           title="Go to Settings"
-          onPress={() => navigation.navigate('Settings')}
+          onPress={() => navigate('Settings')}
           color = "#37D67A"
         />
 

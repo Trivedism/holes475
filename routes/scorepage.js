@@ -23,7 +23,7 @@ function Scorepage({ navigation: {navigate}, route }) {
         <Button
           color = "#37D67A"
           title="Go to Settings"
-          onPress={() => navigation.navigate('Settings')}
+          onPress={() => navigate('Settings')}
         />
         <Button title="Go back" onPress={() => navigation.goBack()}
         color = "#37D67A" />
