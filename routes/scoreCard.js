@@ -29,7 +29,7 @@ function scoreCard({ navigation: {navigate}, route}) {
       }
         
       </View>
-      </ScrollView>
+      
    
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Button
@@ -46,6 +46,7 @@ function scoreCard({ navigation: {navigate}, route}) {
         {/* <Button title="Go back" onPress={() => navigation.goBack()} 
         color = "#37D67A"/> */}
       </View>
+      </ScrollView>
       
       </>
       

@@ -19,8 +19,8 @@ function SettingsScreen({ navigation }) {
       </View>
 
 
-        <Button title="Go back" onPress={() => navigation.goBack()} 
-        color = "#37D67A"/>
+        {/* <Button title="Go back" onPress={() => navigation.goBack()} 
+        color = "#37D67A"/> */}
       </View>
     );
   }
