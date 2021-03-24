@@ -23,7 +23,7 @@ function scoreCard({ navigation: {navigate}, route}) {
       {
         players.map((data, index) => {
             return(
-              <ScoreCardVal key ={index.toString()} name = {`Player${index}`}/>
+              <ScoreCardVal key ={index.toString()} name = {`Player ${ index+1 }`}/>
             )
         })
       }

@@ -17,19 +17,22 @@ const scoreCardVal = (props) => {
               
               <View style = {styles.spacing}>
               <View style = {{flexDirection: 'row'}}>
-              <Text> Hole 1                     </Text>
+              <Text>             Hole 1                     </Text>
               <Text>Hole 2                      </Text>
-              <Text>Hole 3                      </Text>
+              <Text>Hole 3              </Text>
                 </View>
               <View style = {{flexDirection: 'row'}}>
+              <Text>     </Text>
                 <NumericInput type='up-down'
                 onChange={value => console.log(value)}
                 valueType='real'
                 rounded />
+                <Text>   </Text>
                 <NumericInput type='up-down'
                 onChange={value => console.log(value)}
                 valueType='real'
                 rounded />
+                <Text>   </Text>
                 <NumericInput type='up-down'
                 onChange={value => console.log(value)}
                 valueType='real'
