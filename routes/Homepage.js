@@ -15,7 +15,7 @@ import {useState} from 'react'
 
 
 function HomePage({ navigation: {navigate} }) {
-  const [players, setPlayers] = useState(0);
+  const [players, setPlayers, setHoles] = useState(0);
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -46,6 +46,8 @@ function HomePage({ navigation: {navigate} }) {
        onChange={value => setPlayers(value)}
        valueType='real'
        rounded 
+       maxValue={15}
+       minValue={1}
        />
 
     </View>
@@ -57,9 +59,11 @@ function HomePage({ navigation: {navigate} }) {
       />
 
       <NumericInput type='up-down'
-       onChange={value => console.log(value)}
+      onChange={value => console.log(value)}
        valueType='real'
-       rounded 
+       rounded
+       minValue={1}
+       maxValue={18}
        onLimitReached={(isMax,msg) => console.log(isMax,msg)}
        />
 
