@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import { Text, View, StyleSheet, TextInput, NativeModules } from "react-native";
+import { Text, View, StyleSheet, TextInput, ScrollView } from "react-native";
 import NumericInput from 'react-native-numeric-input'
 
 
@@ -18,29 +18,21 @@ const scoreCardVal = (props) => {
                 <TextInput style={styles.teamName} placeholder={name} onChangeText={(val) => setName(val), (val) => setNames(names.concat(val))}/>
               </View>
               
-              <View style = {styles.spacing}>
-
-
-                </View>
-
               <View style = {{flexDirection: 'row'}}>
-              {
-        holes.map((data, index) => {
-            return(
-              <View>
-              <Text>    Hole { index+1 }                </Text>
-              <NumericInput type='up-down'
-                onChange={value => console.log(value)}
-                valueType='real'
-                rounded />
-                
+                <ScrollView horizontal={true}>
+                  {holes.map((data, index) => {
+                    return(
+                     <View>
+                      <Text>    Hole { index+1 }                </Text>
+                      <NumericInput type='up-down'
+                      onChange={value => console.log(value)}
+                      valueType='real'
+                      rounded />   
+                     </View>
+                    ) })
+                  }
+                </ScrollView>
               </View>
-              
-            )
-        })
-      }
-
-            </View>
 
               <Text style={styles.teamScore}>{props.score}</Text>
             </View>
