@@ -28,7 +28,7 @@ function HomePage({ navigation: {navigate} }) {
       <Button
         
         title="Go to Score Card"
-        onPress={() => navigate('scoreCard', { players: players })}
+        onPress={() => navigate('scoreCard', { players: players, holes: holes })}
         color = "#37D67A"
         
       />
@@ -69,6 +69,8 @@ function HomePage({ navigation: {navigate} }) {
        maxValue={18}
        onLimitReached={(isMax,msg) => console.log(isMax,msg)}
        />
+
+       {console.log(holes)}
 
     </View>
     </View>

@@ -10,7 +10,7 @@ function scoreCard({ navigation: {navigate}, route}) {
     var players = Array.from(Array(route.params.players).keys())
     var holesVal = Array.from(Array(route.params.holes).keys())
     var names = []
-
+    console.log("Wholes:" + holesVal.length)
     return (
       <>
       
@@ -24,7 +24,7 @@ function scoreCard({ navigation: {navigate}, route}) {
       {
         players.map((data, index) => {
             return(
-              <ScoreCardVal holes = {holesVal} key ={index.toString()} name = {`Player ${ index+1 }`}/>
+              <ScoreCardVal holes = {holesVal.length} key ={index.toString()} name = {`Player ${ index+1 }`}/>
             )
         })
       }

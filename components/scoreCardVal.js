@@ -8,6 +8,7 @@ const scoreCardVal = (props) => {
   const [name, setName] = useState(props.name)
   const [names, setNames] = useState([])
   var holes = Array.from(Array(props.holes).keys())
+  console.log("Holes" + holes.length)
         
         return (
           <View style={styles.cardItemContainer}>
@@ -31,8 +32,8 @@ const scoreCardVal = (props) => {
                 valueType='real'
                 rounded />
                 
-                </View>
-              )
+              </View>
+            )
         })
       }
 
