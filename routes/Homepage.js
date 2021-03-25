@@ -15,7 +15,8 @@ import {useState} from 'react'
 
 
 function HomePage({ navigation: {navigate} }) {
-  const [players, setPlayers, setHoles] = useState(0);
+  const [players, setPlayers] = useState(0);
+  const [holes, setHoles] = useState(0);
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -59,7 +60,9 @@ function HomePage({ navigation: {navigate} }) {
       />
 
       <NumericInput type='up-down'
-      onChange={value => console.log(value)}
+      initValue= {holes}
+       value={holes}
+       onChange={value => setHoles(value)}
        valueType='real'
        rounded
        minValue={1}

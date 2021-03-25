@@ -8,6 +8,7 @@ import { Image, ScrollView, Text } from 'react-native';
 function scoreCard({ navigation: {navigate}, route}) {
     
     var players = Array.from(Array(route.params.players).keys())
+    var holesVal = Array.from(Array(route.params.holes).keys())
     var names = []
 
     return (
@@ -23,7 +24,7 @@ function scoreCard({ navigation: {navigate}, route}) {
       {
         players.map((data, index) => {
             return(
-              <ScoreCardVal key ={index.toString()} name = {`Player ${ index+1 }`}/>
+              <ScoreCardVal holes = {holesVal} key ={index.toString()} name = {`Player ${ index+1 }`}/>
             )
         })
       }

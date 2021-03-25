@@ -1,12 +1,14 @@
 import React, { Component, useState } from "react";
-import { Text, View, StyleSheet, TextInput } from "react-native";
+import { Text, View, StyleSheet, TextInput, NativeModules } from "react-native";
 import NumericInput from 'react-native-numeric-input'
 
-const scoreCardVal = (props) => {
 
+const scoreCardVal = (props) => {
+ // const [holes, setHoles] = useState(props.holes)
   const [name, setName] = useState(props.name)
   const [names, setNames] = useState([])
-
+  var holes = Array.from(Array(props.holes).keys())
+        
         return (
           <View style={styles.cardItemContainer}>
             <View style={styles.scoreContainer}>
@@ -18,26 +20,21 @@ const scoreCardVal = (props) => {
               <View style = {styles.spacing}>
               <View style = {{flexDirection: 'row'}}>
               <Text>             Hole 1                     </Text>
-              <Text>Hole 2                      </Text>
-              <Text>Hole 3              </Text>
                 </View>
-              <View style = {{flexDirection: 'row'}}>
               <Text>     </Text>
-                <NumericInput type='up-down'
+              {
+        holes.map((data, index) => {
+            return(
+              <View style = {{flexDirection: 'row'}}>
+              <NumericInput type='up-down'
                 onChange={value => console.log(value)}
                 valueType='real'
                 rounded />
-                <Text>   </Text>
-                <NumericInput type='up-down'
-                onChange={value => console.log(value)}
-                valueType='real'
-                rounded />
-                <Text>   </Text>
-                <NumericInput type='up-down'
-                onChange={value => console.log(value)}
-                valueType='real'
-                rounded />
-              </View>
+                
+                </View>
+              )
+        })
+      }
 
             </View>
 
