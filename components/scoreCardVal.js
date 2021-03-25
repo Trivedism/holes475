@@ -19,20 +19,23 @@ const scoreCardVal = (props) => {
               </View>
               
               <View style = {styles.spacing}>
-              <View style = {{flexDirection: 'row'}}>
-              <Text>             Hole 1                     </Text>
+
+
                 </View>
-              <Text>     </Text>
+
+              <View style = {{flexDirection: 'row'}}>
               {
         holes.map((data, index) => {
             return(
-              <View style = {{flexDirection: 'row'}}>
+              <View>
+              <Text>    Hole { index+1 }                </Text>
               <NumericInput type='up-down'
                 onChange={value => console.log(value)}
                 valueType='real'
                 rounded />
                 
               </View>
+              
             )
         })
       }
