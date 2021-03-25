@@ -33,11 +33,14 @@ function scoreCard({ navigation: {navigate}, route}) {
       
    
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      
+      <View style = {{marginVertical: 20}}>
       <Button
           title="Go to Final Scores"
           onPress={() => navigate('Scorepage', { players: players })}
           color = "#37D67A"
         />
+        </View>
         <Button
           title="Go to Settings"
           onPress={() => navigate('Settings')}

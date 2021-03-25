@@ -1,6 +1,8 @@
 import React, { Component, useState } from "react";
 import { Text, View, StyleSheet, TextInput, ScrollView } from "react-native";
 import NumericInput from 'react-native-numeric-input'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
 const scoreCardVal = (props) => {
@@ -12,17 +14,25 @@ const scoreCardVal = (props) => {
         
         return (
           <View style={styles.cardItemContainer}>
+         
             <View style={styles.scoreContainer}>
-              <View>
+              <View  style = { {flexDirection : 'row', alignItems: 'center', padding: 10,  justifyContent: 'center'}} >
                 {/* <Text style={styles.teamName}>{props.name}</Text> */}
+                <View style = {{marginHorizontal: 10}}>
+                <FontAwesome5 name="user-edit" size={20} color="#ffffff" />
+                </View>
                 <TextInput style={styles.teamName} placeholder={name} onChangeText={(val) => setName(val), (val) => setNames(names.concat(val))}/>
+                
               </View>
               
               <View style = {{flexDirection: 'row'}}>
-                <ScrollView horizontal={true}>
+                <ScrollView 
+                    horizontal={true}
+                >
+
                   {holes.map((data, index) => {
                     return(
-                     <View>
+                     <View style = {{padding: 5}}>
                       <Text>    Hole { index+1 }                </Text>
                       <NumericInput type='up-down'
                       onChange={value => console.log(value)}
