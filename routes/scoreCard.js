@@ -3,7 +3,7 @@ import { Button, View, StatusBar, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import ScoreCardVal from '../components/scoreCardVal'
-import { Image, ScrollView, Text } from 'react-native';
+import { Image, ImageBackground, ScrollView, Text } from 'react-native';
 
 function scoreCard({ navigation: {navigate}, route}) {
     
@@ -11,8 +11,16 @@ function scoreCard({ navigation: {navigate}, route}) {
     var holesVal = Array.from(Array(route.params.holes).keys())
     var names = []
     console.log("Wholes:" + holesVal.length)
+  
     return (
       <>
+
+
+      <ImageBackground style = {styles.back} source={require('../assets/grass.jpg')} >
+        
+
+      
+      
       
       {/* <ScoreCardVal name = {players.length}/>
       <ScoreCardVal name = "Player 2"/>
@@ -41,20 +49,27 @@ function scoreCard({ navigation: {navigate}, route}) {
           color = "#37D67A"
         />
         </View>
+
+        <View  style = {{marginBottom: 20}}>
         <Button
           title="Go to Settings"
           onPress={() => navigate('Settings')}
           color = "#37D67A"
         />
+        </View>
 
         {/* <Button title="Go back" onPress={() => navigation.goBack()} 
         color = "#37D67A"/> */}
       </View>
       </ScrollView>
+    
       
+      </ImageBackground>
+
       </>
       
     );
+    
   }
 
   const styles = StyleSheet.create({
@@ -62,8 +77,15 @@ function scoreCard({ navigation: {navigate}, route}) {
       flex: 1,
       marginTop: StatusBar.currentHeight || 0,
     },
+
+    back: {
+      flex: 1,
+      flexDirection: "column"
+    },
+
     item: {
       backgroundColor: '#90EE90', 
+     // backgroundColor: 'rgba(52, 52, 52, 0.8)'
       padding: 20,
       marginVertical: 8,
       marginHorizontal: 16,

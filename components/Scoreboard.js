@@ -1,8 +1,11 @@
 import React, { Component } from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { ImageBackground, Image, Text, View, StyleSheet } from "react-native";
 
 const Scoreboard = (props) => {
         return (
+
+         // <ImageBackground style = {styles.back} source={require('../assets/grass.jpg')} >
+
           <View style={styles.cardItemContainer}>
             <View style={styles.scoreContainer}>
               <View>
@@ -11,6 +14,8 @@ const Scoreboard = (props) => {
               <Text style={styles.teamScore}>{props.score}</Text>
             </View>
           </View>
+
+         // </ImageBackground>
         );
       }
 
@@ -26,6 +31,10 @@ const styles = StyleSheet.create({
       backgroundColor: "#37D67A",
       alignItems: "center"
       
+    },
+    back: {
+      flex: 1,
+      flexDirection: "column"
     },
 
     scoreContainer: {

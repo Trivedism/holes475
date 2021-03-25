@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import { Text, View, StyleSheet, TextInput, ScrollView } from "react-native";
+import { Text, View, StyleSheet, TextInput, ScrollView, ImageBackground } from "react-native";
 import NumericInput from 'react-native-numeric-input'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -13,6 +13,9 @@ const scoreCardVal = (props) => {
   console.log("Holes" + holes.length)
         
         return (
+
+          
+          
           <View style={styles.cardItemContainer}>
          
             <View style={styles.scoreContainer}>
@@ -32,8 +35,23 @@ const scoreCardVal = (props) => {
 
                   {holes.map((data, index) => {
                     return(
-                     <View style = {{padding: 5}}>
-                      <Text>    Hole { index+1 }                </Text>
+                     <View style = {{padding: 5, alignItems: 'center'}}>
+
+
+                       <View style = {{flexDirection: 'row'}}>
+                        <Ionicons name="golf" size={20} color="#FFFACD"/>
+
+                
+                      <Text style = {{color : "white"}}>  
+                      
+                         { index+1 }   
+                               
+                      </Text>
+                      </View>
+
+                    
+
+
                       <NumericInput type='up-down'
                       onChange={value => console.log(value)}
                       valueType='real'
@@ -57,24 +75,28 @@ const styles = StyleSheet.create({
 
     cardItemContainer: {
       borderRadius: 8,
-      borderColor: "black",
-      borderWidth: 1,
-      margin: 12,
+      borderColor: "grey",
+      borderWidth: 2,
+      margin: 8,
       backgroundColor: "#37D67A",
+    // backgroundColor: '#00000000',
       alignItems: "center"
       
     },
 
+   
+   
     scoreContainer: {
       margin: 1
     },
     teamName: {
-      fontSize: 14,
+      fontSize: 15,
       textAlign: "center",
-      fontWeight: "bold"
+      fontWeight: "bold",
+      
     },
     teamScore: {
-      fontSize: 24,
+      fontSize: 10,
       textAlign: "center",
       fontWeight: "bold"
     }
