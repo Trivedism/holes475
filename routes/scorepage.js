@@ -3,6 +3,7 @@ import { Button, View, StatusBar, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Scoreboard from '../components/Scoreboard'
+import RankingsBanner from '../components/RankingsBanner'
 
 function Scorepage({ navigation: {navigate}, route }) {
 
@@ -10,16 +11,19 @@ function Scorepage({ navigation: {navigate}, route }) {
 
     return (
       <>
+
       <View>
+        <RankingsBanner></RankingsBanner>
       {
         players.map((data, index) => {
             return(
-              <Scoreboard key ={index.toString()} name = {`Player${index}`}/>
+              <Scoreboard key ={index.toString()} name = {`${index+1} | Player: ${(index+1)*3}`}/>
             )
         })
       }
-      </View>
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+
+      </View >
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', marginTop: 9, marginBottom: 7 }}>
         <Button
           color = "#37D67A"
           title="Go to Settings"
@@ -33,6 +37,21 @@ function Scorepage({ navigation: {navigate}, route }) {
   }
 
   const styles = StyleSheet.create({
+    banner:{
+      borderRadius: 8,
+      borderColor: "black",
+      borderWidth: 1,
+      margin: 15,
+      backgroundColor: "#37D67A",
+      alignItems: "center"
+    },
+
+    bannerWrite:{
+      fontSize: 24,
+      textAlign: "center",
+      fontWeight: "bold",
+      fontFamily: "monospace"
+    },
     container: {
       flex: 1,
       marginTop: StatusBar.currentHeight || 0,
@@ -47,6 +66,10 @@ function Scorepage({ navigation: {navigate}, route }) {
     title: {
       fontSize: 32,
     },
+
+ 
+
+
   });
 
   export default Scorepage

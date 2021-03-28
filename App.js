@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Button } from 'react-native';
+import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Button, Platform } from 'react-native';
 import Scoreboard from './components/Scoreboard'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -31,6 +31,8 @@ const App = () => {
   const renderItem = ({ item }) => (
     <Item title={item.title} />
   );
+
+
 
   return (
     <>

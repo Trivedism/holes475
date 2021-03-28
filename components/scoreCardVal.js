@@ -90,9 +90,10 @@ const styles = StyleSheet.create({
       margin: 1
     },
     teamName: {
-      fontSize: 15,
+      fontSize: 13,
       textAlign: "center",
       fontWeight: "bold",
+      fontFamily: "monospace"
       
     },
     teamScore: {

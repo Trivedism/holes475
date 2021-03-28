@@ -5,6 +5,7 @@ const Scoreboard = (props) => {
         return (
 
          // <ImageBackground style = {styles.back} source={require('../assets/grass.jpg')} >
+            
 
           <View style={styles.cardItemContainer}>
             <View style={styles.scoreContainer}>
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
       borderRadius: 8,
       borderColor: "black",
       borderWidth: 1,
-      margin: 12,
+      margin: 8,
       backgroundColor: "#37D67A",
       alignItems: "center"
       
@@ -42,12 +43,21 @@ const styles = StyleSheet.create({
     },
     teamName: {
       fontSize: 14,
-      textAlign: "center"
+      textAlign: "center",
+      fontFamily: "monospace",
+      fontWeight: "bold"
     },
     teamScore: {
       fontSize: 24,
       textAlign: "center",
-      fontWeight: "bold"
+      fontWeight: "bold",
+      fontFamily: "monospace"
+    },
+    ranking: {
+      fontSize: 12,
+      textAlign: "left",
+      
+
     }
   });
 
