@@ -11,7 +11,7 @@ function scoreCard({ navigation: {navigate}, route}) {
     var players = Array.from(Array(route.params.players).keys())
     var holesVal = Array.from(Array(route.params.holes).keys())
     const [names, setNames] = useState([])
-    var nameVals = []    
+    var nameVals = []
     
     // console.log(names.length)
     return (
@@ -48,7 +48,7 @@ function scoreCard({ navigation: {navigate}, route}) {
       }
       {
         players.map((data, index) => {
-            nameVals.push("")
+            
             return(
               <ScoreCardVal holes = {holesVal.length} key ={index.toString()} name = {`Player ${ index+1 }`} addName={(val) => setNames(names.concat(val))}/>
 
@@ -65,7 +65,7 @@ function scoreCard({ navigation: {navigate}, route}) {
       <View style = {{marginVertical: 20}}>
       <Button
           title="Go to Final Scores"
-          onPress={() => navigate('Scorepage', { players: players })}
+          onPress={() => navigate('Scorepage', { players: players , names: names})}
           color = "#37D67A"
         />
         </View>

@@ -8,6 +8,7 @@ import RankingsBanner from '../components/RankingsBanner'
 function Scorepage({ navigation: {navigate}, route }) {
 
    var players = route.params.players
+   var names = route.params.names
 
     return (
       <>
@@ -17,7 +18,7 @@ function Scorepage({ navigation: {navigate}, route }) {
       {
         players.map((data, index) => {
             return(
-              <Scoreboard key ={index.toString()} name = {`${index+1} | Player: ${(index+1)*3}`}/>
+              <Scoreboard key ={index.toString()} name = {`${index+1} | ${names[index]}: ${(index+1)*3}`}/>
             )
         })
       }

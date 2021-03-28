@@ -8,11 +8,16 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const scoreCardVal = (props) => {
  // const [holes, setHoles] = useState(props.holes)
   var initName= props.name
-  const [name, setName] = useState("")
+  const [name, setName] = useState('')
   const [names, setNames] = useState([])
   var holes = Array.from(Array(props.holes).keys())
   const add = props.addName
   const [num, setNum] = useState(0)
+  var currName = "Hello"
+
+  const change = (value) => {
+    currName.concat(value)
+  }
 
   // useEffect(() => {
                     
@@ -33,8 +38,8 @@ const scoreCardVal = (props) => {
                 <View style = {{marginHorizontal: 10}}>
                 <FontAwesome5 name="user-edit" size={20} color="#ffffff" />
                 </View>
-                <TextInput style={styles.teamName} placeholder={initName} onChangeText={value => setName("1"+value), 
-                (val) => setNames(names.concat(val)), (val) => add(val)}
+                <TextInput style={styles.teamName} placeholder={initName} onChangeText={name => setName(name)}
+                defaultValue={name} onSubmitEditing={() => add(name)}
                 />
                 {
                   //console.log("Num" + name)
