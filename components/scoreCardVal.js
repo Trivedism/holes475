@@ -39,7 +39,7 @@ const scoreCardVal = (props) => {
                 <FontAwesome5 name="user-edit" size={20} color="#ffffff" />
                 </View>
                 <TextInput style={styles.teamName} placeholder={initName} onChangeText={name => setName(name)}
-                defaultValue={name} onSubmitEditing={() => add(name)}
+                defaultValue={name} onEndEditing={() => add(name)}
                 />
                 {
                   //console.log("Num" + name)
