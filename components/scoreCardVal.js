@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState, useEffect } from "react";
 import { Text, View, StyleSheet, TextInput, ScrollView, ImageBackground } from "react-native";
 import NumericInput from 'react-native-numeric-input'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
@@ -7,10 +7,19 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const scoreCardVal = (props) => {
  // const [holes, setHoles] = useState(props.holes)
-  const [name, setName] = useState(props.name)
+  var initName= props.name
+  const [name, setName] = useState("")
   const [names, setNames] = useState([])
   var holes = Array.from(Array(props.holes).keys())
-  console.log("Holes" + holes.length)
+  const add = props.addName
+  const [num, setNum] = useState(0)
+
+  // useEffect(() => {
+                    
+  //   return () => {
+  //     console.log("Names" + name)
+  //   }
+  // }, [name])
         
         return (
 
@@ -24,41 +33,33 @@ const scoreCardVal = (props) => {
                 <View style = {{marginHorizontal: 10}}>
                 <FontAwesome5 name="user-edit" size={20} color="#ffffff" />
                 </View>
-                <TextInput style={styles.teamName} placeholder={name} onChangeText={(val) => setName(val), (val) => setNames(names.concat(val))}/>
-                
+                <TextInput style={styles.teamName} placeholder={initName} onChangeText={value => setName("1"+value), 
+                (val) => setNames(names.concat(val)), (val) => add(val)}
+                />
+                {
+                  //console.log("Num" + name)
+                }
               </View>
-              
               <View style = {{flexDirection: 'row'}}>
-                <ScrollView 
-                    horizontal={true}
-                >
-
-                  {holes.map((data, index) => {
+              <ScrollView horizontal={true} >
+              {
+                holes.map((data, index) => {
                     return(
                      <View style = {{padding: 5, alignItems: 'center'}}>
-
-
-                       <View style = {{flexDirection: 'row'}}>
+                      <View style = {{flexDirection: 'row'}}>
                         <Ionicons name="golf" size={20} color="#FFFACD"/>
-
-                
                       <Text style = {{color : "white"}}>  
-                      
-                         { index+1 }   
-                               
+                         { index+1 }              
                       </Text>
                       </View>
-
-                    
-
-
                       <NumericInput type='up-down'
                       onChange={value => console.log(value)}
                       valueType='real'
                       rounded />   
                      </View>
-                    ) })
-                  }
+                    ) 
+                  })
+              }
                 </ScrollView>
               </View>
 

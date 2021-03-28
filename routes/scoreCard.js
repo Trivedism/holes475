@@ -4,17 +4,25 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import ScoreCardVal from '../components/scoreCardVal'
 import { Image, ImageBackground, ScrollView, Text } from 'react-native';
-
+import { set } from 'react-native-reanimated';
+import { useState, useEffect} from 'react'
 function scoreCard({ navigation: {navigate}, route}) {
-    
+
     var players = Array.from(Array(route.params.players).keys())
     var holesVal = Array.from(Array(route.params.holes).keys())
-    var names = []
-    console.log("Wholes:" + holesVal.length)
-  
+    const [names, setNames] = useState([])
+    var nameVals = []    
+    
+    // console.log(names.length)
     return (
       <>
-
+      {
+      names.map((data, index) => {
+            return (
+              console.log("Data" + data)
+            )
+      })
+     }
 
       <ImageBackground style = {styles.back} source={require('../assets/grass.jpg')} >
         
@@ -31,10 +39,22 @@ function scoreCard({ navigation: {navigate}, route}) {
       
       {
         players.map((data, index) => {
+          nameVals.concat("")
+          return(
+            <>
+            </>
+          )
+        })
+      }
+      {
+        players.map((data, index) => {
+            nameVals.push("")
             return(
-              <ScoreCardVal holes = {holesVal.length} key ={index.toString()} name = {`Player ${ index+1 }`}/>
+              <ScoreCardVal holes = {holesVal.length} key ={index.toString()} name = {`Player ${ index+1 }`} addName={(val) => setNames(names.concat(val))}/>
+
             )
         })
+
       }
         
       </View>
