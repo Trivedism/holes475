@@ -12,10 +12,10 @@ function MyStack() {
   return (
     <>
     <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={Homepage} />
-      <Stack.Screen name="Scorepage" component={scorepage} />
-      <Stack.Screen name="scoreCard" component={scoreCard} />
-      <Stack.Screen name="Settings" component={Settings} />
+      <Stack.Screen name="Home" component={Homepage} options={{ headerShown: false }}/>
+      <Stack.Screen name="Scorepage" component={scorepage} options={{ headerShown: false }} />
+      <Stack.Screen name="scoreCard" component={scoreCard} options={{ headerShown: false }} />
+      <Stack.Screen name="Settings" component={Settings} options={{ headerShown: false }} />
     </Stack.Navigator>
     </>
   );
