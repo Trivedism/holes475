@@ -12,7 +12,7 @@ function Scorepage({ navigation: {navigate}, route }) {
 
     return (
       <>
-
+      <View style={{marginTop:30}}></View>
       <View>
         <RankingsBanner></RankingsBanner>
       {
@@ -24,14 +24,16 @@ function Scorepage({ navigation: {navigate}, route }) {
       }
 
       </View >
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', marginTop: 9, marginBottom: 7 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', marginTop: 9, marginBottom: 10 }}>
         <Button
           color = "#37D67A"
           title="Go to Settings"
           onPress={() => navigate('Settings')}
         />
-        {/* <Button title="Go back" onPress={() => navigation.goBack()}
-        color = "#37D67A" /> */}
+        <View style={{marginTop:20}}></View>
+        <Button 
+        title="Go back" onPress={() => navigation.navigate('scoreCard',)}
+        color = "#37D67A" />
       </View>
       </>
     );

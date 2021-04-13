@@ -16,9 +16,9 @@ function scoreCard({ navigation: {navigate}, route}) {
     // console.log(names.length)
     return (
       <>
-      <View style={{marginTop: 30, marginBottom: 10 }}>
 
-      </View>
+
+
       {
       names.map((data, index) => {
             return (
@@ -28,7 +28,13 @@ function scoreCard({ navigation: {navigate}, route}) {
      }
 
       <ImageBackground style = {styles.back} source={require('../assets/grass.jpg')} >
-        
+
+      <View style = {{marginTop: 30, alignItems: 'center'}}>
+        <Button 
+        title="Go back" onPress={() => navigate('Homepage')} 
+        color = "#37D67A"/> 
+        </View>
+
 
       
       
@@ -81,8 +87,6 @@ function scoreCard({ navigation: {navigate}, route}) {
         />
         </View>
 
-        <Button title="Go back" onPress={() => navigation.goBack()} 
-        color = "#37D67A"/> 
       </View>
       </ScrollView>
     
