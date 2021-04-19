@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, View, Image, StyleSheet, TextInput } from 'react-native';
+import { Button, View, Image, StyleSheet, TextInput,Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import NumericInput from 'react-native-numeric-input'
@@ -24,23 +24,10 @@ function HomePage({ navigation: {navigate} }) {
         style={styles.tinyLogo}
         source={require('../assets/Holes.png')}
       />
-      <View style = {styles.spacing}>
-      <Button
-        
-        title="Go to Score Card"
-        onPress={() => navigate('scoreCard', { players: players, holes: holes })}
-        color = "#37D67A"
-        
-      />
+    <View style = {{flexDirection: 'row'}}style = {styles.spacing}>
+    <View>
 
-    </View>
-
-    <View style = {styles.spacing}>
-
-      <Button
-        title="Add Players"
-        color = "#37D67A"
-      />
+      <Text>    Players</Text>
       <NumericInput type='up-down'
        initValue= {players}
        value={players}
@@ -52,14 +39,10 @@ function HomePage({ navigation: {navigate} }) {
        />
 
     </View>
-
-    <View style = {styles.spacing}>
+    <Text h1>      </Text>
+    <View>
       
-      <Button style = {styles.font}
-        title="Add Holes"
-        color = "#37D67A"
-      />
-
+      <Text h1>     Holes</Text>
       <NumericInput type='up-down'
       initValue= {holes}
        value={holes}
@@ -72,6 +55,16 @@ function HomePage({ navigation: {navigate} }) {
        />
 
        {console.log(holes)}
+
+    </View>
+    </View>
+    <View style = {styles.spacing}>
+      
+      <Button
+        title="Go to Scorecard"
+        onPress={() => navigate('scoreCard', { players: players, holes: holes })}
+        color = "#37D67A"
+      />
 
     </View>
     </View>
