@@ -29,9 +29,9 @@ function scoreCard({ navigation: {navigate}, route}) {
 
       <ImageBackground style = {styles.back} source={require('../assets/grass.jpg')} >
 
-      <View style = {{marginTop: 30, alignItems: 'center'}}>
+      <View style = {{marginTop: 30, alignItems: 'flex-start', marginLeft: 15}}>
         <Button 
-        title="Go back" onPress={() => navigate('Homepage')} 
+        title="Go back" onPress={() => navigate('HomePage')} 
         color = "#37D67A"/> 
         </View>
 
@@ -69,20 +69,19 @@ function scoreCard({ navigation: {navigate}, route}) {
       </View>
       
    
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', flexDirection : 'row' }}>
       
-      <View style = {{marginVertical: 20}}>
-      <Button
-          title="Go to Final Scores"
-          onPress={() => navigate('Scorepage', { players: players , names: names})}
+      <View  style = {{marginRight: 10}}>
+        <Button
+          title="Settings"
+          onPress={() => navigate('Settings')}
           color = "#37D67A"
         />
         </View>
-
-        <View  style = {{marginBottom: 20}}>
-        <Button
-          title="Go to Settings"
-          onPress={() => navigate('Settings')}
+      <View style = {{marginLeft: 10}}>
+      <Button
+          title="End Game"
+          onPress={() => navigate('ScorePage', { players: players , names: names})}
           color = "#37D67A"
         />
         </View>

@@ -1,10 +1,9 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
-import Scoreboard from '../components/Scoreboard';
-import scorepage from '../routes/scorepage'
+import ScorePage from './ScorePage'
 import Settings from '../routes/Settings'
-import Homepage from '../routes/Homepage'
-import scoreCard from '../routes/scoreCard'
+import HomePage from './HomePage'
+import ScoreCard from './ScoreCard'
 
 const Stack = createStackNavigator();
 
@@ -12,9 +11,9 @@ function MyStack() {
   return (
     <>
     <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={Homepage} options={{ headerShown: false }}/>
-      <Stack.Screen name="Scorepage" component={scorepage} options={{ headerShown: false }} />
-      <Stack.Screen name="scoreCard" component={scoreCard} options={{ headerShown: false }} />
+      <Stack.Screen name="HomePage" component={HomePage} options={{ headerShown: false }}/>
+      <Stack.Screen name="ScorePage" component={ScorePage} options={{ headerShown: false }} />
+      <Stack.Screen name="ScoreCard" component={ScoreCard} options={{ headerShown: false }} />
       <Stack.Screen name="Settings" component={Settings} options={{ headerShown: false }} />
     </Stack.Navigator>
     </>

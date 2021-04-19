@@ -6,7 +6,7 @@ const RankingsBanner = (props) => {
         <>
         <View style={styles.cardItemContainer}>
         <Text style={styles.teamName}>
-            RANKINGS!
+            Final Scores
         </Text>
         </View>
         </>

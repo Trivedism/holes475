@@ -61,8 +61,8 @@ function HomePage({ navigation: {navigate} }) {
     <View style = {styles.spacing}>
       
       <Button
-        title="Go to Scorecard"
-        onPress={() => navigate('scoreCard', { players: players, holes: holes })}
+        title="Go to ScoreCard"
+        onPress={() => navigate('ScoreCard', { players: players, holes: holes })}
         color = "#37D67A"
       />
 

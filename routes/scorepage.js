@@ -25,14 +25,8 @@ function Scorepage({ navigation: {navigate}, route }) {
 
       </View >
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', marginTop: 9, marginBottom: 10 }}>
-        <Button
-          color = "#37D67A"
-          title="Go to Settings"
-          onPress={() => navigate('Settings')}
-        />
-        <View style={{marginTop:20}}></View>
         <Button 
-        title="Go back" onPress={() => navigation.navigate('scoreCard',)}
+        title="New Game" onPress={() =>navigate('HomePage')}
         color = "#37D67A" />
       </View>
       </>
