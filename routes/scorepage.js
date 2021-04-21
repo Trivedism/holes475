@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Scoreboard from '../components/Scoreboard'
 import RankingsBanner from '../components/RankingsBanner'
 
-function Scorepage({ navigation: {navigate}, route }) {
+function ScorePage({ navigation: {navigate}, route }) {
 
    var players = route.params.players
    var names = route.params.names
@@ -69,4 +69,4 @@ function Scorepage({ navigation: {navigate}, route }) {
 
   });
 
-  export default Scorepage
+  export default ScorePage

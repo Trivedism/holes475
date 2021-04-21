@@ -6,7 +6,7 @@ import ScoreCardVal from '../components/scoreCardVal'
 import { Image, ImageBackground, ScrollView, Text } from 'react-native';
 import { set } from 'react-native-reanimated';
 import { useState, useEffect} from 'react'
-function scoreCard({ navigation: {navigate}, route}) {
+function ScoreCard({ navigation: {navigate}, route}) {
 
     var players = Array.from(Array(route.params.players).keys())
     var holesVal = Array.from(Array(route.params.holes).keys())
@@ -121,4 +121,4 @@ function scoreCard({ navigation: {navigate}, route}) {
     },
   });
 
-  export default scoreCard
+  export default ScoreCard
