@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, View, StatusBar, StyleSheet } from 'react-native';
+import { Button, View, StatusBar, StyleSheet,Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Scoreboard from '../components/Scoreboard'
@@ -14,7 +14,11 @@ function ScorePage({ navigation: {navigate}, route }) {
       <>
       <View style={{marginTop:30}}></View>
       <View>
-        <RankingsBanner></RankingsBanner>
+      <View style = {{alignItems:'center', justifyContent:'center',}}>
+          <Image
+          source={require('../assets/finalscores.png')}
+          />
+        </View>
       {
         players.map((data, index) => {
             return(

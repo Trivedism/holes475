@@ -33,7 +33,13 @@ function ScoreCard({ navigation: {navigate}, route}) {
         <Button 
         title="Go back" onPress={() => navigate('HomePage')} 
         color = "#37D67A"/> 
+      </View>
+        <View style = {{alignItems:'center', justifyContent:'center',}}>
+          <Image
+          source={require('../assets/scorecard.png')}
+          />
         </View>
+       
 
 
       
@@ -118,6 +124,14 @@ function ScoreCard({ navigation: {navigate}, route}) {
     },
     title: {
       fontSize: 32,
+    },
+    tinyLogo: {
+      marginTop:10,
+      marginBottom: 20,
+      alignItems:'center',
+      justifyContent:'center',
+      width: 100,
+      height: 100,
     },
   });
 

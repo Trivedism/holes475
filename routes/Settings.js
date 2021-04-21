@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, View, StatusBar,StyleSheet,Text } from 'react-native';
+import { Button, View, StatusBar,StyleSheet,Text,Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import NumericInput from 'react-native-numeric-input';
@@ -19,9 +19,14 @@ function Settings({ navigation }) {
           title="Go back" onPress={() => navigation.navigate('HomePage')} 
           color = "#37D67A"/> 
         </View>
+        <View style = {{alignItems:'center', justifyContent:'center',}}>
+          <Image
+          source={require('../assets/settings.png')}
+          />
+        </View>
 
-        <View style = {{marginTop: 120, flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-          <View style = {{marginBottom: 10,marginRight:10}}>
+        <View style = {{marginTop: 80, flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+          <View style = {{marginBottom: 30,marginRight:10}}>
             <View style = {{marginBottom: 10,marginLeft:20}}><Text>Players</Text></View>
             <NumericInput type='up-down'
             initValue= {players}
@@ -34,7 +39,7 @@ function Settings({ navigation }) {
             />
           </View>
           
-          <View style = {{marginBottom: 10}}>
+          <View style = {{marginBottom: 30}}>
             <View style = {{marginBottom: 10,marginLeft:20}}><Text>Holes</Text></View>
             <NumericInput type='up-down'
             initValue= {holes}
