@@ -52,7 +52,7 @@ function ScoreCard({ navigation: {navigate}, route}) {
       // let currPlayer = temp[i];
       // currPlayer.score = currPlayer.score + score;
       // gamePlayers[i].score = gamePlayers[i].score + score
-      sums[playerIndex][holeIndex] = sums[playerIndex][holeIndex] + score
+      sums[playerIndex][holeIndex] = score
       // console.log("scoreee" + playerIndex + " " + holeIndex+  " " + sums[playerIndex][holeIndex])
       // console.log("Player" + playerIndex + " Scores: " + sums[playerIndex])
     }
@@ -70,9 +70,7 @@ function ScoreCard({ navigation: {navigate}, route}) {
 
 
 
-      {
       
-     }
 
       <ImageBackground style = {styles.back} source={require('../assets/grass.jpg')} >
 
@@ -108,7 +106,6 @@ function ScoreCard({ navigation: {navigate}, route}) {
 
       }
       
-        
       </View>
       
    
@@ -124,7 +121,7 @@ function ScoreCard({ navigation: {navigate}, route}) {
       <View style = {{marginLeft: 10}}>
       <Button
           title="End Game"
-          onPress={() => navigate('ScorePage', { players: players , names: names, holes: holes})}
+          onPress={() => navigate('ScorePage', { players: players , names: names, holes: holes, sums: sums})}
           color = "#37D67A"
         />
         </View>

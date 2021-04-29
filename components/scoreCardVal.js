@@ -18,9 +18,9 @@ const scoreCardVal = (props) => {
   let totalSum = 0;
   const [holeValues, setHoles] = useState([])
 
-
+  // setHoles(arr => [...arr, holes])
   // useEffect(() => {
-  //   holes.forEach(item => setHoles(holeValues.concat(0)));
+  //    setHoles(arr => [...arr, holes])
   // }, [holes])
 
   for (let i = 0; i < holes.length; i++) {
@@ -28,14 +28,14 @@ const scoreCardVal = (props) => {
   }
 
 
-  // console.log(holeValues[0])
+  console.log(holeValues)
 
   function addHoles() {
     
   }
 
   function changeHoles(i, num) {
-    setHoleVal(num);
+    // setHoleVal(num);
     const temp = [...holeVals];
     temp[i] = num;
     totalSum = totalSum + holeVal;
@@ -73,7 +73,6 @@ const scoreCardVal = (props) => {
               <ScrollView horizontal={true} >
               {
                 holes.map((data, index) => {
-                    addHoles()
                     return(
                      <View style = {{padding: 5, alignItems: 'center'}}>
                       <View style = {{flexDirection: 'row'}}>

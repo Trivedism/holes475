@@ -9,6 +9,9 @@ function ScorePage({ navigation: {navigate}, route }) {
 
    var players = route.params.players
    var names = route.params.names
+   var sums = route.params.sums
+
+   console.log("Sums" + sums[0])
 
     return (
       <>
