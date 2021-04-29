@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import NumericInput from 'react-native-numeric-input'
 import {useState} from 'react'
+import { Player } from '../components/Player'
 
 
 
@@ -17,6 +18,7 @@ import {useState} from 'react'
 function HomePage({ navigation: {navigate} }) {
   const [players, setPlayers] = useState(0);
   const [holes, setHoles] = useState(0);
+  const [gamePlayers, setThem] = useState([]);
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>

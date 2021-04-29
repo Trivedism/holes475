@@ -9,14 +9,38 @@ const scoreCardVal = (props) => {
  // const [holes, setHoles] = useState(props.holes)
   var initName= props.name
   const [name, setName] = useState('')
-  const [names, setNames] = useState([])
   var holes = Array.from(Array(props.holes).keys())
   const add = props.addName
-  const [num, setNum] = useState(0)
   var currName = "Hello"
+  const handleHoles = props.addHoles
+  let holeVals = []
+  const [holeVal, setHoleVal] = useState(0)
+  let totalSum = 0;
+  const [holeValues, setHoles] = useState([])
 
-  const change = (value) => {
-    currName.concat(value)
+
+  // useEffect(() => {
+  //   holes.forEach(item => setHoles(holeValues.concat(0)));
+  // }, [holes])
+
+  for (let i = 0; i < holes.length; i++) {
+    // setHoles(oldArray => [...oldArray[i], 0])
+  }
+
+
+  // console.log(holeValues[0])
+
+  function addHoles() {
+    
+  }
+
+  function changeHoles(i, num) {
+    setHoleVal(num);
+    const temp = [...holeVals];
+    temp[i] = num;
+    totalSum = totalSum + holeVal;
+    console.log("sum" + totalSum);
+    handleHoles(i, num)
   }
 
   // useEffect(() => {
@@ -49,6 +73,7 @@ const scoreCardVal = (props) => {
               <ScrollView horizontal={true} >
               {
                 holes.map((data, index) => {
+                    addHoles()
                     return(
                      <View style = {{padding: 5, alignItems: 'center'}}>
                       <View style = {{flexDirection: 'row'}}>
@@ -58,7 +83,7 @@ const scoreCardVal = (props) => {
                       </Text>
                       </View>
                       <NumericInput type='up-down'
-                      onChange={value => console.log(value)}
+                      onChange={value => changeHoles(index, value)}
                       valueType='real'
                       rounded />   
                      </View>
