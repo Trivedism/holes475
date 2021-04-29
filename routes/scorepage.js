@@ -4,14 +4,20 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Scoreboard from '../components/Scoreboard'
 import RankingsBanner from '../components/RankingsBanner'
+import { Player } from '../components/Player'
+
 
 function ScorePage({ navigation: {navigate}, route }) {
 
    var players = route.params.players
    var names = route.params.names
    var sums = route.params.sums
+   let gamePlayers = route.params.gamePlayers
 
-   console.log("Sums" + sums[0])
+   for(let i = 0; i < players.length; i++) {
+     gamePlayers[i].name = names[i]
+     console.log("Player: " + gamePlayers[i].name + " Score: " + gamePlayers[i].score)
+   }
 
     return (
       <>
@@ -25,7 +31,7 @@ function ScorePage({ navigation: {navigate}, route }) {
       {
         players.map((data, index) => {
             return(
-              <Scoreboard key ={index.toString()} name = {`${index+1} | ${names[index]}: ${(index+1)*3}`}/>
+              <Scoreboard key ={index.toString()} name = {`${index+1} | ${gamePlayers[index].name}: ${gamePlayers[index].score}`}/>
             )
         })
       }

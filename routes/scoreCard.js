@@ -48,11 +48,11 @@ function ScoreCard({ navigation: {navigate}, route}) {
 
     function populatePlayerScore(playerIndex, score, holeIndex) {
       // setHoles(oldArray => [...oldArray[playerIndex], score]);
-      // const temp = [...gamePlayers]
-      // let currPlayer = temp[i];
-      // currPlayer.score = currPlayer.score + score;
-      // gamePlayers[i].score = gamePlayers[i].score + score
       sums[playerIndex][holeIndex] = score
+      const temp = [...gamePlayers]
+      let currPlayer = temp[playerIndex];
+      currPlayer.score = sums[playerIndex]
+      console.log(gamePlayers[playerIndex].score)
       // console.log("scoreee" + playerIndex + " " + holeIndex+  " " + sums[playerIndex][holeIndex])
       // console.log("Player" + playerIndex + " Scores: " + sums[playerIndex])
     }
@@ -121,7 +121,7 @@ function ScoreCard({ navigation: {navigate}, route}) {
       <View style = {{marginLeft: 10}}>
       <Button
           title="End Game"
-          onPress={() => navigate('ScorePage', { players: players , names: names, holes: holes, sums: sums})}
+          onPress={() => navigate('ScorePage', { players: players , names: names, holes: holes, sums: sums, gamePlayers: gamePlayers})}
           color = "#37D67A"
         />
         </View>
