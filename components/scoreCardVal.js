@@ -84,6 +84,7 @@ const scoreCardVal = (props) => {
                       <NumericInput type='up-down'
                       onChange={value => changeHoles(index, value)}
                       valueType='real'
+                      minValue={0}
                       rounded />   
                      </View>
                     ) 
