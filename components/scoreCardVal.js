@@ -28,7 +28,7 @@ const scoreCardVal = (props) => {
   }
 
 
-  console.log(holeValues)
+  //console.log(holeValues)
 
   function addHoles() {
     
@@ -39,6 +39,7 @@ const scoreCardVal = (props) => {
     const temp = [...holeVals];
     temp[i] = num;
     totalSum = totalSum + holeVal;
+   // console.log("hellO");
     console.log("sum" + totalSum);
     handleHoles(i, num)
   }

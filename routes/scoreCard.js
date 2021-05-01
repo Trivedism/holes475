@@ -44,7 +44,7 @@ function ScoreCard({ navigation: {navigate}, route}) {
       console.log("name" + gamePlayers[i].name)
     }
 
-
+  
 
     function populatePlayerScore(playerIndex, score, holeIndex) {
       // setHoles(oldArray => [...oldArray[playerIndex], score]);
@@ -53,9 +53,15 @@ function ScoreCard({ navigation: {navigate}, route}) {
       let currPlayer = temp[playerIndex];
       currPlayer.score = sums[playerIndex]
       console.log(gamePlayers[playerIndex].score)
+    
+   
       // console.log("scoreee" + playerIndex + " " + holeIndex+  " " + sums[playerIndex][holeIndex])
       // console.log("Player" + playerIndex + " Scores: " + sums[playerIndex])
     }
+
+    
+   
+
 
       // console.log("Holes" + holes)
 
